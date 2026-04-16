@@ -171,7 +171,14 @@ hr { border-color: #0D9488 !important; margin: 0.6rem 0 1rem !important; }
     border-color: #B2E8E3 !important;
 }
 
-/* Chat input */
+/* ── Chat input bottom bar ──
+   Streamlit renders the chat input in a sticky footer div that can
+   inherit dark-mode colours even when the rest of the page is light.
+   We force the whole bottom area and the textarea inside to be visible. */
+[data-testid="stBottom"],
+[data-testid="stBottom"] > div {
+    background: #F0F4F8 !important;
+}
 [data-testid="stChatInput"] {
     border-radius: 13px !important;
     border: 2px solid #CBD5E1 !important;
@@ -179,6 +186,15 @@ hr { border-color: #0D9488 !important; margin: 0.6rem 0 1rem !important; }
     font-size: 0.88rem !important;
     font-family: 'Sora', sans-serif !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+}
+/* The actual <textarea> inside the chat input widget */
+[data-testid="stChatInput"] textarea {
+    color: #1E293B !important;
+    background: #FFFFFF !important;
+    caret-color: #0D9488 !important;
+}
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #94A3B8 !important;
 }
 [data-testid="stChatInput"]:focus-within {
     border-color: #0D9488 !important;

@@ -2,7 +2,7 @@
 langchain==0.1.20
 langchain-community==0.0.38
 langchain-huggingface==0.0.3
-langchain-groq==0.1.3          # Groq LLM integration for LangChain
+langchain-groq==1.1.2          # Groq LLM integration for LangChain (>=0.2 fixes proxies error)
 langchain-text-splitters==0.0.2
 
 # ── LLM Providers & Embeddings ────────────────────────────────────────────────
@@ -16,6 +16,8 @@ faiss-cpu==1.8.0               # Local FAISS vector store (CPU version)
 
 # ── Document Loaders ──────────────────────────────────────────────────────────
 pypdf==4.2.0                   # PDF loading and parsing
+wikipedia==1.4.0               # Wikipedia article loader (used in build_vectorstore.py)
+beautifulsoup4>=4.12.0         # Required by WebBaseLoader for web page parsing
 
 # ── Web UI ────────────────────────────────────────────────────────────────────
 streamlit==1.35.0              # Streamlit UI framework
