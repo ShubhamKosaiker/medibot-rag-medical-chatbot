@@ -32,5 +32,5 @@ venv/
 .DS_Store
 Thumbs.db
 
-# Streamlit cache
-.streamlit/
+# Streamlit — ignore secrets but keep theme config
+.streamlit/secrets.toml

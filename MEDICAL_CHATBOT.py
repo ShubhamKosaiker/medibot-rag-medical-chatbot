@@ -107,6 +107,22 @@ html, body, [class*="css"] { font-family: 'Sora', sans-serif !important; }
 #MainMenu, footer { visibility: hidden; }
 .stApp { background: #F0F4F8; }
 
+/* ── GLOBAL TEXT FIX ──────────────────────────────────────────────────────────
+   Streamlit may default to white text in dark-mode environments.
+   These rules force dark text across all main-area elements so text stays
+   visible regardless of the user's OS colour scheme.                         */
+.stApp p, .stApp span, .stApp label,
+.stApp li, .stApp a, .stApp div,
+.stMarkdown, .stMarkdown p, .stMarkdown li,
+.stMarkdown strong, .stMarkdown em,
+[data-testid="stChatMessage"] p,
+[data-testid="stChatMessage"] span,
+[data-testid="stChatMessage"] div,
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] div {
+    color: #1E293B !important;
+}
+
 /* ── MAIN BLOCK ── */
 .block-container {
     padding: 1.8rem 2.5rem 1rem !important;
@@ -136,6 +152,9 @@ hr { border-color: #0D9488 !important; margin: 0.6rem 0 1rem !important; }
     color: #134E4A !important;
     padding: 1rem 1.2rem !important;
 }
+[data-testid="stInfo"] p,
+[data-testid="stInfo"] span,
+[data-testid="stInfo"] div { color: #134E4A !important; }
 
 /* Chat messages */
 [data-testid="stChatMessage"] {
@@ -145,6 +164,7 @@ hr { border-color: #0D9488 !important; margin: 0.6rem 0 1rem !important; }
     padding: 0.85rem 1.1rem !important;
     margin-bottom: 0.65rem !important;
     box-shadow: 0 1px 5px rgba(0,0,0,0.04) !important;
+    color: #1E293B !important;
 }
 [data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
     background: #EFF9F8 !important;
