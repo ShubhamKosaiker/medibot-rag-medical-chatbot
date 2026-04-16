@@ -1,0 +1,36 @@
+# Secrets — never commit API keys
+.env
+
+# Vector store — large binary files, rebuild with build_vectorstore.py
+vectorstore/
+
+# Source data — PDFs can be large
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+env/
+venv/
+.venv/
+.conda/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamlit/
